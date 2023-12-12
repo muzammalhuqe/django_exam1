@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+
+    {% comment %} card section {% endcomment %}
+
+    <div class="container mx-auto">
+        <div class="card_container" style="display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;">
+
+        {% for i in categories %}
+
+        <div class="card p-2" style="">
+            <img src="{{i.strCategoryThumb}}" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"> {{ i.idCategory}}. {{ i.strCategory}}</h5>
+              <p class="card-text"> {{ i.strCategoryDescription|truncatewords:10 }}</p>
+            </div>
+        </div>
+        
+        {% endfor %}
+        </div>
+    </div>
+    
+
+
+{% endblock  %}

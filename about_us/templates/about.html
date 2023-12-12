@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="container mx-auto bg-dark">
+      <div class="card_container" style="display: flex;
+      gap: 50px; padding: 10%;">
+      <div class="col-6">
+        <div class="card" style="width: 22rem;">
+          <div class="card-body">
+            <h3 class="text-center">About Us</h3>
+            <h1 class="card-title text-center">Othiti Chef Restaurant</h1>
+            <p class="card-text">A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit down to eat it. It is also a place where people go to enjoy the time and to eat a meal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="card" style="width: 30rem;">
+          <img src="{% static 'img2.jpg' %}" class="card-img-top" alt="image">
+        </div>
+      </div>
+
+    </div>
+
+    {% endblock  %}
